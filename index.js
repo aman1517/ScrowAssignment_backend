@@ -38,7 +38,7 @@ app.post("/postdata",async(req,res)=>{
 app.delete("/:id",async(req,res)=>{
    
   try{
-   await Users.deleteOne({_id:req.params.id})
+    await Users.findByIdAndDelete({_id:req.params.id})
   }
   catch(err){
        res.status(409).json({message:err.message})
