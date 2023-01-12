@@ -34,6 +34,16 @@ app.post("/postdata",async(req,res)=>{
        res.status(409).json({message:err.message})
     }
 })
+// delete rote
+app.delete("/:id",async(req,res)=>{
+   
+  try{
+   await Users.deleteOne({_id:req.params.id})
+  }
+  catch(err){
+       res.status(409).json({message:err.message})
+  }
+})
 app.listen(port,()=>{
     console.log(`listing on port ${port}`)
 })
