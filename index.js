@@ -1,7 +1,7 @@
 const express=require('express')
 const cors=require('cors')
 const bodyParser=require('body-parser')
-const {Connection}=require("./Db/db.js")
+const {Connection}=require("./db/DB.js")
 const Users=require('./Module/UserSchema.js')
 const app=express()
 app.use(cors())
