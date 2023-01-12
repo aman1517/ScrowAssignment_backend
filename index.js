@@ -10,6 +10,8 @@ const port=process.env.PORT ||4500;
 
 Connection()
 
+
+//route
 app.get("/",(req,res)=>{
     res.send("Welocme to home page")
 })
